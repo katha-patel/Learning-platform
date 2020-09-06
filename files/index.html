@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.jpg">
+    <title>Shiksha</title>
+    <!-- Custom CSS -->
+    <link href="../assets/libs/flot/css/float-chart.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../dist/css/style.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="preloader">
+        <div class="lds-ripple">
+            <div class="lds-pos"></div>
+            <div class="lds-pos"></div>
+        </div>
+    </div>
+
+    <div id="main-wrapper">
+
+        <header class="topbar" data-navbarbg="skin5">
+            <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+                <div class="navbar-header" data-logobg="dark">
+                    <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i class="ti-menu ti-close"></i></a>
+
+                    <a class="navbar-brand" href="">
+                        <b class="logo-icon p-l-10">
+
+                             <img src="../assets/images/favicon.jpg" alt="user" class="rounded-circle" width="31"></b>
+
+                        <span class="logo-text">
+
+                             <h2>Shiksha</h2>
+
+                    </a>
+                    <a class="topbartoggler d-block d-md-none waves-effect waves-light" href="javascript:void(0)" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i class="ti-more"></i></a>
+                </div>
+
+                <div class="navbar-collapse collapse" id="navbarSupportedContent" data-navbarbg="skin5">
+
+                    <ul class="navbar-nav float-left mr-auto">
+                      <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="courses_visible.php" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../assets/images/navigation_bar/courses_search.png" alt="user"  width="90"></a>
+                        <!--  <div class="dropdown-menu dropdown-menu-right user-dd animated">
+                              <a class="dropdown-item" href=""><i class="fa fa-deaf" aria-hidden="true" width="60"></i>Deaf</a>
+                              <a class="dropdown-item" href=""><i class="fa fa-blind" aria-hidden="true" width="60"></i>Blind</a>
+                              <a class="dropdown-item" href=""><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-mic-mute-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M12.734 9.613A4.995 4.995 0 0 0 13 8V7a.5.5 0 0 0-1 0v1c0 .274-.027.54-.08.799l.814.814zm-2.522 1.72A4 4 0 0 1 4 8V7a.5.5 0 0 0-1 0v1a5 5 0 0 0 4.5 4.975V15h-3a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-3v-2.025a4.973 4.973 0 0 0 2.43-.923l-.718-.719zM11 7.88V3a3 3 0 0 0-5.842-.963L11 7.879zM5 6.12l4.486 4.486A3 3 0 0 1 5 8V6.121zm8.646 7.234l-12-12 .708-.708 12 12-.708.707z"/>
+            </svg>Dumb</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href=""><img src="../assets/images/users/handicapped.jpg" alt="user"  width="31">Physically disabled</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href=""><img src="../assets/images/users/intellectual_disable.jpeg" alt="user"  width="31"></i>Intellectual disability</a>
+                              <div class="dropdown-divider"></div>
+
+                          </div>-->
+                      </li>
+
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="jobs_visible.php" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><b><img src="../assets/images/navigation_bar/jobs_search.jpg" alt=""  width="60"></b> </a>
+                        <!--  <div class="dropdown-menu dropdown-menu-right user-dd animated">
+                              <a class="dropdown-item" href=""><i class="fa fa-deaf" aria-hidden="true" width="60"></i>Deaf</a>
+                              <a class="dropdown-item" href=""><i class="fa fa-blind" aria-hidden="true" width="60"></i>Blind</a>
+                              <a class="dropdown-item" href=""><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-mic-mute-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M12.734 9.613A4.995 4.995 0 0 0 13 8V7a.5.5 0 0 0-1 0v1c0 .274-.027.54-.08.799l.814.814zm-2.522 1.72A4 4 0 0 1 4 8V7a.5.5 0 0 0-1 0v1a5 5 0 0 0 4.5 4.975V15h-3a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-3v-2.025a4.973 4.973 0 0 0 2.43-.923l-.718-.719zM11 7.88V3a3 3 0 0 0-5.842-.963L11 7.879zM5 6.12l4.486 4.486A3 3 0 0 1 5 8V6.121zm8.646 7.234l-12-12 .708-.708 12 12-.708.707z"/>
+            </svg>Dumb</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href=""><img src="../assets/images/users/handicapped.jpg" alt="user"  width="31">Physically disabled</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href=""><img src="../assets/images/users/intellectual_disable.jpeg" alt="user"  width="31"></i>Intellectual disability</a>
+                              <div class="dropdown-divider"></div>
+
+                          </div>-->
+                      </li>
+                    </ul>
+
+
+                    <ul class="navbar-nav float-right">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link  waves-effect waves-dark" href="#" >Home <i class="mdi mdi-home font-24"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link  waves-effect waves-dark" href="#about_us" >About Us <i class="mdi mdi-home font-24"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link  waves-effect waves-dark" href="#contact_us" >Contact Us <i class="mdi mdi-home font-24"></i>
+                            </a>
+                        </li>
+
+                      <!--  <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../../assets/images/users/1.jpg" alt="user" class="rounded-circle" width="31"></a>
+                            <div class="dropdown-menu dropdown-menu-right user-dd animated">
+                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-user m-r-5 m-l-5"></i> My Profile</a>
+                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-wallet m-r-5 m-l-5"></i> My Balance</a>
+                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-email m-r-5 m-l-5"></i> Inbox</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="javascript:void(0)"><i class="ti-settings m-r-5 m-l-5"></i> Account Setting</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="javascript:void(0)"><i class="fa fa-power-off m-r-5 m-l-5"></i> Logout</a>
+                                <div class="dropdown-divider"></div>
+                                <div class="p-l-30 p-10"><a href="javascript:void(0)" class="btn btn-sm btn-success btn-rounded">View Profile</a></div>
+                            </div>
+                        </li>-->
+                        <!-- ============================================================== -->
+                        <!-- User profile and search -->
+                        <!-- ============================================================== -->
+                    </ul>
+                </div>
+              </nav>
+            </header>
+          </div>
+            <br>
+            <br>
+        <main>
+
+          <div class="container-fluid">
+            <div class ="row">
+                <div class ="col-1">
+                </div>
+            <div class ="col-10">
+
+              <div class="card">
+                  <div class="card-body bg-cyan">
+
+                      <div class="row">
+                          <!-- column -->
+                          <div class="col-lg-4" style="background-color:white; ">
+                            <h4 >Audio tour</h4>
+                            <i class="fa fa-file-audio-o m-b-5 font-16"></i>
+                            <audio controls>
+                                <audio width="5" height="50" controls>
+          <source src="horse.ogg" type="audio/ogg">
+          <source src="horse.mp3" type="audio/mpeg">
+          <source src="horse.wave" type="audio/wav">
+          </audio>
+                          </div>
+                          <div class="col-lg-4">
+                            <div  >
+                              <br>
+                              <center>
+                                <h3 class=" text-white">Get Certified and Get Hired!!</h3>
+                                <button type="button"  class="btn btn-outline-light  btn-lg" data-target="#mymodel" data-toggle="modal">Login</button>
+                                <button type="button"onclick="window.location.href='register.html'" class="btn btn-outline-light btn-lg">Register</button>
+                            </center>
+                            </div>
+                          </div>
+
+                              <div class="col-lg-4" style="background-color:white;">
+                                <h4>Video tour</h4>
+                                  <video width="300" height="100" controls>
+          <source src="movie.mp4" type="video/mp4">
+          <source src="movie.ogg" type="video/ogg">
+
+          </video>
+                                <i class="fa fa-file-video-o m-b-5 font-16"></i>
+                                  <i class="fa fa-picture-o  m-b-5 font-16"></i>
+
+                              </div>
+                          </div>
+                          <div class="row" style="margin:20px;">
+                            <div class="col-lg-4"></div>
+                            <div class="col-lg-4">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="bg-dark p-10 text-white text-center">
+                                           <i class="fa fa-user m-b-5 font-16"></i>
+                                           <h5 class="m-b-0 m-t-5">2540</h5>
+                                           <small class="font-light">Total Students</small>
+                                        </div>
+                                    </div>
+                                     <div class="col-6">
+                                        <div class="bg-dark p-10 text-white text-center">
+                                           <i class="fa fa-plus m-b-5 font-16"></i>
+                                           <h5 class="m-b-0 m-t-5">120</h5>
+                                           <small class="font-light">New Users</small>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 m-t-15">
+                                        <div class="bg-dark p-10 text-white text-center">
+                                           <i class="fa fa-check m-b-5 font-16"></i>
+                                           <h5 class="m-b-0 m-t-5">656</h5>
+                                           <small class="font-light">Students Placed</small>
+                                        </div>
+                                    </div>
+                                     <div class="col-6 m-t-15">
+                                        <div class="bg-dark p-10 text-white text-center">
+                                           <i class="fa fa-certificate m-b-5 font-16"></i>
+                                           <h5 class="m-b-0 m-t-5">9540</h5>
+                                           <small class="font-light">Job Opportunities</small>
+                                        </div>
+                                    </div>
+
+                                    </div>
+                                </div>
+                                  <div class="col-lg-4"></div>
+                          </div>
+
+                          <!-- column -->
+                      </div>
+                  </div>
+            </div>
+            <div class ="col-1">
+            </div>
+            </div>
+            <br>
+            <br>
+
+            <div class="row">
+            <div class="col-1">
+            </div>
+            <div class="col-5">
+              <div class="card">
+                  <!-- Nav tabs -->
+                  <ul class="nav nav-tabs" role="tablist">
+                      <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#home" role="tab"><span class="hidden-sm-up"></span> <span class="hidden-xs-down">Tab1</span></a> </li>
+                      <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#profile" role="tab"><span class="hidden-sm-up"></span> <span class="hidden-xs-down">Tab2</span></a> </li>
+                      <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#messages" role="tab"><span class="hidden-sm-up"></span> <span class="hidden-xs-down">Tab3</span></a> </li>
+                  </ul>
+                  <!-- Tab panes -->
+                  <div class="tab-content tabcontent-border">
+                      <div class="tab-pane active" id="home" role="tabpanel">
+                          <div class="p-20">
+                              <img src="../assets/images/navigation_bar/tab1.jpg" class="img-fluid">
+                          </div>
+                      </div>
+                      <div class="tab-pane  p-20" id="profile" role="tabpanel">
+                          <div class="p-20">
+                              <img src="../assets/images/navigation_bar/tab2.jpg" class="img-fluid">
+                          </div>
+                      </div>
+                      <div class="tab-pane p-20" id="messages" role="tabpanel">
+                          <div class="p-20">
+                              <img src="../assets/images/navigation_bar/tab3.jpg" class="img-fluid">
+                          </div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+            <div class="col-5">
+              <section id="about_us">
+                <div class="card-body">
+                    <h4 class="card-title">Know About Us</h4>
+                    <p>
+                      <br>
+                      <br>
+                      The Taj Mahal incorporates and expands on design traditions of Persian and earlier Mughal architecture. Specific inspiration came from successful Timurid and Mughal buildings including the Gur-e Amir (the tomb of Timur, progenitor of the Mughal dynasty, in Samarkand),[11] Humayun's Tomb which inspired the Charbagh gardens and hasht-behesht (architecture) plan of the site, Itmad-Ud-Daulah's Tomb (sometimes called the Baby Taj), and Shah Jahan's own Jama Masjid in Delhi. While earlier Mughal buildings were primarily constructed of red sandstone, Shah Jahan promoted the use of white marble inlaid with semi-precious stones. Buildings under his patronage reached new levels of refinement.[12]
+                        The Taj Mahal incorporates and expands on design traditions of Persian and earlier Mughal architecture. Specific inspiration came from successful Timurid
+                    </p>
+              </div>
+            </section>
+            </div>
+            <div class="col-1">
+            </div>
+          </div>
+
+            <div class="row">
+              <div class="col-1">
+              </div>
+              <div class="col-5">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title m-b-0">Updates</h4>
+                    </div>
+                    <ul class="list-style-none">
+                        <li class="d-flex no-block card-body">
+                            <i class="fa fa-check-circle w-30px m-t-5"></i>
+                            <div>
+                                <a href="#" class="m-b-0 font-medium p-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</a>
+                                <span class="text-muted">Added new course</span>
+                            </div>
+                            <div class="ml-auto">
+                                <div class="tetx-right">
+                                    <h5 class="text-muted m-b-0">20</h5>
+                                    <span class="text-muted font-16">Jan</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="d-flex no-block card-body border-top">
+                            <i class="fa fa-gift w-30px m-t-5"></i>
+                            <div>
+                                <a href="#" class="m-b-0 font-medium p-0">1200 students placed!</a>
+                                <span class="text-muted">Congratualations!</span>
+                            </div>
+                            <div class="ml-auto">
+                                <div class="tetx-right">
+                                    <h5 class="text-muted m-b-0">11</h5>
+                                    <span class="text-muted font-16">Jan</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="d-flex no-block card-body border-top">
+                            <i class="fa fa-plus w-30px m-t-5"></i>
+                            <div>
+                                <a href="#" class="m-b-0 font-medium p-0">Maruti is a Responsive Admin theme</a>
+                                <span class="text-muted">But already everything was solved. It will ...</span>
+                            </div>
+                            <div class="ml-auto">
+                                <div class="tetx-right">
+                                    <h5 class="text-muted m-b-0">19</h5>
+                                    <span class="text-muted font-16">Jan</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="d-flex no-block card-body border-top">
+                            <i class="fa fa-leaf w-30px m-t-5"></i>
+                            <div>
+                                <a href="#" class="m-b-0 font-medium p-0">Envato approved Maruti Admin template</a>
+                                <span class="text-muted">i am very happy to approved by TF</span>
+                            </div>
+                            <div class="ml-auto">
+                                <div class="tetx-right">
+                                    <h5 class="text-muted m-b-0">20</h5>
+                                    <span class="text-muted font-16">Jan</span>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="d-flex no-block card-body border-top">
+                            <i class="fa fa-question-circle w-30px m-t-5"></i>
+                            <div>
+                                <a href="#" class="m-b-0 font-medium p-0"> I am alwayse here if you have any question</a>
+                                <span class="text-muted">we glad that you choose our template</span>
+                            </div>
+                            <div class="ml-auto">
+                                <div class="tetx-right">
+                                    <h5 class="text-muted m-b-0">15</h5>
+                                    <span class="text-muted font-16">Jan</span>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+              </div>
+              <div class="col-5">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">What our users are saying?</h4>
+                        <div class="chat-box scrollable" style="height:475px;">
+                            <!--chat Row -->
+                            <ul class="chat-list">
+                                <!--chat Row -->
+                                <li class="chat-item">
+                                    <div class="chat-img"><img src="../assets/images/users/1.jpg" alt="user"></div>
+                                    <div class="chat-content">
+                                        <h6 class="font-medium">Katha Patel</h6>
+                                        <div class="box bg-light-info">Lorem Ipsum is simply dummy text of the printing &amp; type setting industry.</div>
+                                    </div>
+                                    <div class="chat-time">10:56am 15 Jan 2020</div>
+                                </li>
+                                <!--chat Row -->
+                                <li class="chat-item">
+                                  <div class="chat-img"><img src="../assets/images/users/1.jpg" alt="user"></div>
+                                  <div class="chat-content">
+                                        <h6 class="font-medium">Swarali Purandare</h6>
+                                        <div class="box bg-light-info">It’s Great opportunity to work.</div>
+                                    </div>
+                                    <div class="chat-time">10:57 am  15 Jan 2020</div>
+                                </li>
+
+                                <!--chat Row -->
+
+                                <!--chat Row -->
+                                <li class="chat-item">
+                                  <div class="chat-img"><img src="../assets/images/users/1.jpg" alt="user"></div>
+                                  <div class="chat-content">
+                                        <h6 class="font-medium">Shrushti</h6>
+                                        <div class="box bg-light-info">Well we have good budget for the project</div>
+                                    </div>
+                                    <div class="chat-time">11:00 am  15 Jan 2020</div>
+                                </li>
+                                <!--chat Row -->
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+              </div>
+              <div class="col-1">
+              </div>
+            </div>
+          </div>
+
+</main>
+<footer class="page-footer font-small cyan darken-3 bg-dark">
+  <div class="container">
+    <section id="contact_us">
+    <center>
+      <br>
+      <br>
+      <h2 style= "color: black">Contact Us</h2>
+      <br>
+      <br>
+        <div class="mb-5 flex-center">
+          <!-- Facebook -->
+          <a class="fb-ic">
+            <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x" style="font-size:36px;color: #3b5998;"> </i>
+          </a>
+          <!-- Twitter -->
+          <a class="tw-ic">
+            <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x" style="font-size:36px;color: #00aced;"> </i>
+          </a>
+          <!-- Google +-->
+          <a class="gplus-ic">
+            <i class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x" style="font-size:36px;color:green"> </i>
+          </a>
+          <!--Linkedin -->
+          <a class="li-ic">
+            <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x" style="font-size:36px; color: #0e76a8"> </i>
+          </a>
+          <!--Instagram-->
+          <a class="ins-ic">
+            <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x" style="font-size:36px;  color: #3f729b;"> </i>
+          </a>
+          <!--Pinterest-->
+
+        </div>
+        <div>
+          <a class="phone">
+            <i class="fa fa-phone" aria-hidden="true" style="font-size:36px;color:black"> </i>
+            <h5 style="font-size:20px;color:black">7083472839</h5>
+          </a>
+          <!--Pinterest-->
+          <a class="email">
+            <i class="fa fa-envelope" aria-hidden="true" style="font-size:36px;color:black"> </i>
+              <h6 style="font-size:20px;color:black">abc@gmail.com</h6>
+          </a>
+        </div>
+      </center>
+
+    </section>
+  </div>
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2020 Copyright: KSsquare.com
+  </div>
+
+</footer>
+        <!-- Copyright -->
+
+
+    <!-- ============================================================== -->
+    <!-- End Wrapper -->
+    <!-- ============================================================== -->
+    <!-- ============================================================== -->
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="../assets/libs/jquery/dist/jquery.min.js"></script>
+    <!-- Bootstrap tether Core JavaScript -->
+    <script src="../assets/libs/popper.js/dist/umd/popper.min.js"></script>
+    <script src="../assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../assets/libs/perfect-scrollbar/dist/perfect-scrollbar.jquery.min.js"></script>
+    <script src="../assets/extra-libs/sparkline/sparkline.js"></script>
+    <!--Wave Effects -->
+    <script src="../dist/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="../dist/js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="../dist/js/custom.min.js"></script>
+    <!--This page JavaScript -->
+    <!-- <script src="../../dist/js/pages/dashboards/dashboard1.js"></script> -->
+    <!-- Charts js Files -->
+    <script src="../assets/libs/flot/excanvas.js"></script>
+    <script src="../assets/libs/flot/jquery.flot.js"></script>
+    <script src="../assets/libs/flot/jquery.flot.pie.js"></script>
+    <script src="../assets/libs/flot/jquery.flot.time.js"></script>
+    <script src="../assets/libs/flot/jquery.flot.stack.js"></script>
+    <script src="../assets/libs/flot/jquery.flot.crosshair.js"></script>
+    <script src="../assets/libs/flot.tooltip/js/jquery.flot.tooltip.min.js"></script>
+    <script src="../dist/js/pages/chart/chart-page-init.js"></script>
+
+</body>
+
+</html>
