@@ -25,6 +25,7 @@
     </div>
 
     <div id="main-wrapper">
+
         <header class="topbar" data-navbarbg="skin5">
             <nav class="navbar top-navbar navbar-expand-md navbar-dark">
                 <div class="navbar-header" data-logobg="dark">
@@ -47,7 +48,7 @@
 
                     <ul class="navbar-nav float-left mr-auto">
                       <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="courses_visible.php" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="../assets/images/navigation_bar/courses_search.png" alt="user"  width="90"></a>
+                          <a class="nav-link dropdown-toggle waves-effect waves-dark pro-pic" href="courses_visible.php" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><p class="font-24">Courses</p></a>
                         <!--  <div class="dropdown-menu dropdown-menu-right user-dd animated">
                               <a class="dropdown-item" href=""><i class="fa fa-deaf" aria-hidden="true" width="60"></i>Deaf</a>
                               <a class="dropdown-item" href=""><i class="fa fa-blind" aria-hidden="true" width="60"></i>Blind</a>
@@ -64,7 +65,7 @@
                       </li>
 
                       <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark pro-pic" href="jobs_visible.php" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><b><img src="../assets/images/navigation_bar/jobs_search.jpg" alt=""  width="60"></b> </a>
+                        <a class="nav-link dropdown-toggle waves-effect waves-dark pro-pic" href="jobs_visible.php" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><p class="font-24">Jobs</p> </a>
                         <!--  <div class="dropdown-menu dropdown-menu-right user-dd animated">
                               <a class="dropdown-item" href=""><i class="fa fa-deaf" aria-hidden="true" width="60"></i>Deaf</a>
                               <a class="dropdown-item" href=""><i class="fa fa-blind" aria-hidden="true" width="60"></i>Blind</a>
@@ -84,15 +85,17 @@
 
                     <ul class="navbar-nav float-right">
                         <li class="nav-item dropdown">
-                            <a class="nav-link  waves-effect waves-dark" href="#" >Home <i class="mdi mdi-home font-24"></i>
+                            <a class="nav-link  waves-effect waves-dark" href="#" ><i class="mdi mdi-home font-24"></i> Home 
                             </a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link  waves-effect waves-dark" href="#about_us" >About Us <i class="mdi mdi-home font-24"></i>
+                            <a class="nav-link  waves-effect waves-dark" href="#about_us" ><i class="font-24" ><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-people-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
+                              </svg></i> About Us 
                             </a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link  waves-effect waves-dark" href="#contact_us" >Contact Us <i class="mdi mdi-home font-24"></i>
+                            <a class="nav-link  waves-effect waves-dark" href="#contact_us" ><i class="mdi mdi-phone font-24"></i> Contact Us 
                             </a>
                         </li>
 
@@ -390,13 +393,13 @@
           </div>
 
 </main>
-<footer class="page-footer font-small cyan darken-3 bg-dark">
+<footer class="page-footer font-small cyan darken-3" style="background-color:black;">
   <div class="container">
     <section id="contact_us">
     <center>
       <br>
       <br>
-      <h2 style= "color: black">Contact Us</h2>
+      <h2 style= "color:  #d1c5cd">Contact Us</h2>
       <br>
       <br>
         <div class="mb-5 flex-center">
@@ -423,23 +426,32 @@
           <!--Pinterest-->
 
         </div>
-        <div>
+        <div class="row">
+            <div class="col-sm-4 col-md-4 col-xs-4 col-lg-4"></div>
+            <div class="col-sm-2 col-md-2 col-xs-2 col-lg-2">
           <a class="phone">
-            <i class="fa fa-phone" aria-hidden="true" style="font-size:36px;color:black"> </i>
-            <h5 style="font-size:20px;color:black">7083472839</h5>
+            <i class="fa fa-phone" aria-hidden="true" style="font-size:36px;color: #d1c5cd"> </i>
+            <br>
+            <h5 style="font-size:20px;color: #d1c5cd">7083472839</h5>
           </a>
+          <br>
+        </div>
+          <div class="col-sm-2 col-md-2 col-xs-2 col-lg-2">
           <!--Pinterest-->
           <a class="email">
-            <i class="fa fa-envelope" aria-hidden="true" style="font-size:36px;color:black"> </i>
-              <h6 style="font-size:20px;color:black">abc@gmail.com</h6>
+            <i class="fa fa-envelope" aria-hidden="true" style="font-size:36px;color: #d1c5cd"> </i>
+            <br>
+              <h6 style="font-size:20px;color: #d1c5cd">abc@gmail.com</h6>
           </a>
+        </div>
+        <div class="col-sm-4 col-md-4 col-xs-4 col-lg-4"></div>
         </div>
       </center>
 
     </section>
   </div>
   <!-- Copyright -->
-  <div class="footer-copyright text-center py-3">© 2020 Copyright: KSsquare.com
+  <div class="footer-copyright text-center py-3" style="color: #d1c5cd">© 2020 Copyright: KSsquare.com
   </div>
 
 </footer>
